@@ -1,0 +1,105 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --toastify-color-progress-success: #1DBBC3;
+  --toastify-icon-color-success: #1DBBC3;
+}
+
+body {
+  @apply bg-[#F7FCFD]
+}
+
+
+
+/*------------ REUSABLE CLASS COMPONENTS ------------*/
+.inputStyle {
+  @apply ease-linear duration-200 focus:border-mainColor w-full border-[2px] bg-transparent border-gray-400 placeholder:text-[15px] placeholder:text-gray-400 px-[10px] py-[8px] outline-none rounded-md
+}
+
+.blackBtn {
+  @apply block bg-black border-[2px] border-bgColor ease-linear duration-200 outline outline-transparent outline-[2px] hover:outline-black text-white rounded-md p-3 cursor-pointer
+}
+
+.redBtn {
+  @apply ease-linear duration-200 flex items-center justify-center gap-x-[6px] text-[17px] font-medium text-secondColor bg-[#df6a6221] outline outline-[2px] outline-transparent hover:outline-secondColor hover:border-bgColor hover:bg-secondColor hover:text-white rounded-lg border-[2px] border-secondColor
+}
+
+.tableBtn {
+  @apply text-white px-3 py-2 rounded-lg capitalize ease-linear duration-200 border-[2px] border-transparent outline outline-[2px] hover:border-white;
+  & {
+    background-color: var(--category-color)
+  }
+  &:hover {
+    outline-color: var(--category-color)
+  }
+}
+
+.budgetCardBtn {
+  @apply border-[2px] border-white outline-transparent ease-linear duration-200 outline outline-[2px]  flex gap-x-[6px] items-center px-4 py-3 rounded-md mt-6  w-fit mx-auto text-white tracking-[0.02rem] font-medium capitalize;
+  &:hover {
+    outline-color: var(--cardColor)
+  }
+}
+
+
+
+
+/*------------ PROGRESS STYLING ------------*/
+progress {
+  @apply rounded-lg bg-[#d3dede9a] 
+}
+
+progress[value] {
+  -webkit-appearance:none;
+  -moz-appearance:none;        
+  appearance: none;
+  border:none;
+
+  &::-webkit-progress-bar  {
+    @apply bg-[#d3dede9a] rounded-lg overflow-hidden ease-linear duration-200
+  }
+
+  &::-moz-progress-bar {
+    background-color: var(--cardColor);
+    // Hadi f miscrosoft kthkm f l value of progress not the progress bar
+  }
+
+  &::-webkit-progress-value  {
+    @apply ease-linear duration-200;
+    background : var(--cardColor)
+  }
+
+}
+
+
+
+/*------------ TABLE STYLING ------------*/
+.tableContainer {
+  &::-webkit-scrollbar {
+    height: 15px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #d3dede9a;
+    border: 1px solid #cacaca;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+    background-color: #1DBBC3;
+  }
+
+  th , td {
+    @apply p-[15px] text-center
+  }
+  
+  th {
+    @apply capitalize text-[20px] italic
+  }
+}
