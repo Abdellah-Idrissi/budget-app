@@ -30,7 +30,7 @@ const MainLayout = () => {
 
           <Link className="flex items-center gap-x-1" to={'/'} >
           <img src={logo} alt="logo" className="w-[30px]"/>
-          <span className="text-[20px] font-bold">Budget this</span>
+          <span className="text-[20px] font-bold">Budget</span>
           </Link>
           {isUserFound && 
           <Form method="post" action="/logout"  onSubmit={areUsure}>
